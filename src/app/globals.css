@@ -4,254 +4,517 @@
     justify-content: center;
     align-items: center;
     padding-top: 60px;
-    margin-bottom: 30px;
+    font-family: 'Jost',sans-serif;
 }
 
 .mainbody h1{
-    padding-top: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Jost',sans-serif;
+    margin-bottom: 0.5rem;
+}
+.blogs{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    font-family: 'Jost', sans-serif;
+}
+
+.blogs-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+}
+
+.blogscol{
+    overflow: hidden;
+    border-radius: 4px;
+   
+    height: fit-content;
+    width: 348px;
+    
+}
+
+.blogscol h1{
+    font-weight: 400;
+    font-size: 35.2px;
+    color: #232323;
+    text-align: left;
+    font-family: 'Jost',sans-serif;
+    max-width: 300px;
+    
+    margin-top: 5px;
+}
+
+.blogscol span{
+    font-weight: 700;
+    font-size: 19.2px;
+    font-family: 'Jost',sans-serif;
+}
+
+.blogscol h3{
+    font-weight: 400;
+    font-size: 19.2px;
+    font-family: 'Jost',sans-serif;
+    
+   
+}
+
+.blogscol p{
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-size: 19.2px;
+    max-width: 300px;
+    
+}
+
+.designbutton2{
+    margin-bottom: 15px;
+    margin-top: 127px;
+}
+.designbutton1{
+    margin-bottom: 15px;
+    margin-top: 80px;
+}
+.designbutton3{
+    margin-bottom: 15px;
+    margin-top: 100px;
+}
+.blogscol button{
+    background-color: #6592E6;
+    color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    width: 153.78px;
+    height: 49.98px;
+    font-weight: 600;
+    font-size: 19.2px;
+    font-family: 'Jost',sans-serif;
+}
+.chart{
+    width: 750px;
+}
+.blogscol button:hover{
+    background-color: #4479D9;
+}
+
+
+/* Metrics Sections - TOTAL VISITS and GAME REVENUE */
+.metrics-section {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  padding: 0 2rem;
+}
+
+.metrics-container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 400px;
+  max-width: 600px;
+}
+
+.metrics-container h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.metrics-subtitle {
+  color: #FF6B6B;
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.metrics-button {
+  background: #4A90E2;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.metrics-button:hover {
+  background: #357ABD;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .metrics-container {
+    min-width: 300px;
+    padding: 1.5rem;
+  }
+  
+  .metrics-container h1 {
+    font-size: 1.2rem;
+  }
+  
+  .metrics-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
+.patreon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.patreon h1{
     font-family: 'Jost',sans-serif;
     font-weight: 700;
-    font-size: 48px;
-    padding-bottom: 10px;
+    font-size: 28px;
+    text-align: center;
+}
+.patreon p{
+    color: #FF9966;
+    font-size: 400;
+    font-size: 21px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
 }
 
-.signform{
+.patreon button{
+    background-color: #6592E6;
+    color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    width: 153.78px;
+    height: 49.98px;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Jost',sans-serif;
+}
+
+.users {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
+    margin-bottom: 20px;
+}
+.users h1{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
 }
 
-.signform input[type="password"],
-  .signform input[type="email"],.signform input[type="text"] { 
-    padding: 10px;
-    width: 100%;
-    height:50px;
-    border: 0.5px solid #ccc; 
-    border-radius: 4px;
-    font-family: 'Jost',sans-serif;
-    font-size: 16px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179);
-  }
-  .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: wheat;
-    color: black;
-    padding: 15px 20px;
-    font-family: 'Jost',sans-serif;
-    border-radius: 5px;
-    border: 1px solid #f5c6cb;
-    z-index: 999;
-  }
+@media screen and (max-width:1024px) {
+    .blogs-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .blogscol {
+        width: auto; 
+        padding-left: 20px;
+    }
+}
 
-  .signform button{
+@media screen and (max-width:590px) {
+    .blogs-grid {
+        grid-template-columns: 1fr; 
+       
+    }
+    .blogscol {
+        width: auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     
-    padding: 10px 20px;
-    background-color:   #6592E6; 
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 17.6px; 
-    font-weight: 600;
-    width: 522px;
-    height: 48px;
-     
-  }
-  .signform button:hover{
-    background-color: #4285F4;
-  }
+    }
+    .blogscol p{
+        font-family: 'Jost',sans-serif;
+        font-weight: 400;
+        font-size: 17.4px;
+        max-width: 300px;
+    }
+    .blogscol span{
+        font-weight: 700;
+        font-size: 17.4px;
+        font-family: 'Jost',sans-serif;
+    }
+    
+    .blogscol h3{
+        font-weight: 400;
+        font-size: 17.4px;
+        font-family: 'Jost',sans-serif;
+    
+       
+    }
 
-  .googlesign{
-    width: 522px;
-  }
+    .blogscol h1{
+        font-weight: 400;
+        font-size: 24.7px;
+        color: #232323;
+        font-family: 'Jost',sans-serif;
+        margin-top: 5px;
+        
+    }
 
-  .googlesign button {
-    background-color: #333333;  
-    color: white;
-    border: none;
-    border-radius: 1px;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    cursor: pointer;
+    .designbutton1,.designbutton2,.designbutton3{
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+   
+    .mainbody h1{
+        font-size:35px;
+        font-family: 'Jost',sans-serif;
+        font-weight: 700;
+        text-align: center;
+      
+    }
+}
+
+/* Add these new styles to your existing globals.css */
+
+/* Chart section headings */
+/* The `.chart-section-title` CSS class is styling a heading element that is likely used to display a
+title for a section related to charts. Here's a breakdown of what each property is doing: */
+ /* .chart-section-title {
+    font-family: 'Jost', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #232323;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}  */
+
+/* Chart wrapper */
+ /* .chart {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 1rem;
+}  */
+
+/* Main page background */
+/* body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Update existing mainbody class */
+/* .mainbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    font-family: 'Jost', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh; */
+
+
+/* Page container */
+/* .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+} */
+
+/* Navigation styling (if you have one) */
+/* .nav-container {
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+} */
+
+/* Chart legend styling */
+/* .chart-legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: 'Jost', sans-serif;
+} */
+
+/* .legend-item {
     display: flex;
     align-items: center;
-    justify-content:start;
-    padding-left: 30%;
-     width: 100%;
-   /* height: 50px; */
-   box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179);
-   height: 48px;
-   border-radius:4px;
+    margin: 0 1rem;
 }
 
-.googlesign button:hover{
-    box-shadow: 0 0 10px rgba(102, 178, 255, 1);
-    /* background-color:   #6592E6 */
-}
-.googlesign button .google-icon {
-    padding-right: 20px;
-    display: flex; 
-}
-  .signform input[type="text"]:hover,
-.signform input[type="email"]:hover{
+.legend-color {
+    width: 20px;
+    height: 3px;
+    background-color: #6592E6;
+    margin-right: 0.5rem;
+    border-radius: 2px;
+} */
 
-    border: 1px solid #6592E6;
+/* .legend-text {
+    font-size: 0.9rem;
+    color: #666;
+} */ 
+
+
+
+/* Updated CSS for LARGE charts like Figma */
+
+/* Chart container - much bigger */
+.chart-container {
+    background: white;
+    padding: 4rem 3rem; /* Even more padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 4rem auto; /* More space between charts */
+    max-width: 95%; /* Use almost full width */
+    width: 100%;
+    min-height: 600px; /* Much taller container */
 }
 
-.signbuttons{
+/* Chart section headings - bigger */
+.chart-section-title {
+    font-family: 'Jost', sans-serif;
+    font-size: 2.8rem; /* Even bigger title */
+    font-weight: 700;
+    text-align: center;
+    color: #232323;
+    margin-bottom: 3rem; /* More space below title */
+    letter-spacing: 3px; /* More letter spacing */
+}
+
+/* Chart wrapper - MUCH bigger */
+.chart {
+    width: 100%;
+    max-width: none; /* Remove max-width restriction */
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    min-height: 500px; /* Much taller chart area */
+    height: 500px; /* Fixed height to make charts bigger */
+}
+
+/* Users section adjustments */
+.users {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* margin-top: 50px; */
-    border-top: 1px solid #E5E5E5;
-    padding-top: 40px;
-    width: 522px;
-    margin: auto;
-}
-
-.d-flex{
-    display: flex;
-    gap: 220px;
-}
-.password-container {
-    position: relative;
+    margin-bottom: 6rem; /* Much more bottom margin */
+    padding: 3rem 0; /* More vertical padding */
     width: 100%;
+    max-width: none; /* Remove width restrictions */
 }
 
-.password-input {
-    width: 80%;
-    padding: 10px;
-}
+/* Hide the old compact titles
+.users h1 {
+    display: none;
+} */
 
-.password-toggle {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
- /* Styles for the toggle button */
- .toggle-container {
+/* Chart legend - positioned better for large charts */
+.chart-legend {
     display: flex;
-}
-
-.toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.toggle-text{
-    padding: 6px;
-}
-
-.toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 30px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-.signupbuttons{
-    display: flex;
-    padding-top: 20px;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding-bottom: 20px;
+    margin-top: 2rem;
+    margin-right: 4rem; /* More right margin for big charts */
+    font-family: 'Jost', sans-serif;
+}
 
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
 }
-.pass{
-    padding: 10px 20px;
-    background-color:   #6592E6; 
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 17.6px; 
-    font-weight: 600;
-    text-align: center;
-    height: 40px;   
-    box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179);
+
+.legend-color {
+    width: 30px; /* Bigger color indicator */
+    height: 5px;
+    background-color: #6592E6;
+    margin-right: 1rem;
+    border-radius: 3px;
 }
-.signup{
-    /* padding: 10px 20px; */
-    /* background-color:   #232323;  */
-    color: #007AFF;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 17.6px; 
+
+.legend-text {
+    font-size: 1.1rem; /* Bigger legend text */
+    color: #666;
     font-weight: 500;
-    /* height: 40px;   
-    box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179); */
 }
 
-.pass:hover{
-    background-color:#4285F4 ;
+/* Main body - full width for big charts */
+.mainbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    font-family: 'Jost', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    width: 100%;
+    max-width: none; /* Remove any width restrictions */
 }
 
-.signup:hover{
-    background-color: #e5e5e5;
-}
-
-@media only screen and (max-width: 1024px) {
-    .mainbody h1 {
-        font-size: 36px; 
+/* Responsive adjustments for large charts */
+@media screen and (max-width: 1400px) {
+    .chart-container {
+        margin: 3rem 1rem;
+        padding: 3rem 2rem;
+        max-width: 98%;
     }
-
-    .signform input[type="text"],
-    .signform input[type="email"],
-    .signform button {
-        width: 300px; 
+    
+    .chart {
+        min-height: 450px;
+        height: 450px;
     }
+}
 
-    .signform input[type="password"] {
-        width: 90%;
+@media screen and (max-width: 1024px) {
+    .chart-container {
+        margin: 2rem 1rem;
+        padding: 2rem 1rem;
+        max-width: 95%;
+    }
+    
+    .chart-section-title {
+        font-size: 2.2rem;
+    }
+    
+    .chart {
+        min-height: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .chart-container {
+        margin: 1.5rem 0.5rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .chart-section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .chart {
+        min-height: 300px;
+        height: 300px;
     }
 }
