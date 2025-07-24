@@ -1,108 +1,148 @@
-import React from 'react';
-import Navbar from '../app/components/navbar/navbar'
+"use client"
+import React, { useState, useEffect } from 'react';
+import Navbar from '../components/navbar/navbar';
 import Image from 'next/image';
-import FOOTER from './components/bloxfooter/bloxfooter';
-import './globals.css'
+import FOOTER from '../components/bloxfooter/bloxfooter';
+import { signIn } from '../utils/firebase';
+import './globals.css';
+import { useRouter } from 'next/navigation';
+import { signInWithGoogle } from '../utils/firebase';
+import Lottie from 'react-lottie';
+import lottieAnimation from '../../../public/animation/logginganimation.json'; // Import your lottie.json file
 
-export default function Home(){ 
-    return(
-        <div>
-            <section className='mainimage'>
-               <Navbar/>
-               <div className='mainheadings'>
-               <h1>ROBLOX INSIGHTS</h1>
-               <p>REVENUE ESTIMATIONS FOR EACH GAME</p>
-               <button>START NOW</button>
-               </div>
-            </section>
+export default function signin() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const router = useRouter();
+  const [error, setError] = useState('');
+  const [popupMessage, setPopupMessage] = useState('');
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
-            <section className='feature'>
-                <h1>Features</h1>
-                <div className="feature-grid">
-                    <div className='feature-column'>
-                        <Image src='./feature2.png' alt='feature' width={348} height={195.91} loading="lazy"></Image>
-                        <h1>DETAILED COMPETITOR TRACKING</h1>
-                        <p>See how many players and how much money your competitors make</p>
-                    </div>
-                    <div className='feature-column'>
-                        <Image src='./feature2.png' alt='feature' width={348} height={195.91} loading="lazy"></Image>
-                        <h1>GAMES REVENUE ESTIMATES</h1>
-                        <p>Did you ever wonder how much Roblox developers earn?</p>
-                    </div>
-                    <div className='feature-column'>
-                        <Image src='./feature3.png' alt='feature3' width={348} height={195.91} loading="lazy"></Image>
-                        <h1>SPOT OPPORTUNITIES IN THE MARKET</h1>
-                        <p>Analyze the market before starting to work on your next project</p>
-                    </div>
-                </div> 
-            </section>
-
-            {/* <section className='payplan'> */}
-                 <section className="pay-grid">
-                    <div className='pay-column'>
-                        <h1>Free</h1>
-                        <h2>$0</h2>
-                        <h3>Per month</h3>
-                        <div className='paytext'>
-                        <p>Access to market overview </p> <p>CCU and New Favorites data</p><p> Top games on Roblox</p>
-                        </div>
-                        <button>Get started</button>
-                        
-                    </div>
-                    <div className='pay-column'>
-                        <h1>Indie</h1>
-                        <h2>$19</h2>
-                        <h3>Per month</h3>
-                        <div className='paytext'>
-                        <p>Access to Free</p> <p>Access to last 90 days of data</p><p>Access to revenue estimations</p>
-                        </div>
-                        <button>Get started</button>
-                    </div>
-                    <div className='pay-column'>
-                        <h1>Pro</h1>
-                        <h2>$99</h2>
-                        <h3>Per month</h3>
-                        <div className='paytext'>
-                        <p>Access to Indie </p> <p>Access last 365 days of data</p><p>Detailed ranking of games</p>
-                        </div>
-                        <button>Get started</button>
-                    </div>
-                </section>
-                {/* </section> */}
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
 
-            <section className='view'>
-            <h1>View in Action</h1>
-            <p>Watch an introduction to out platform</p>
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const message = params.get('message');
+    if (message) {
+      setPopupMessage(message);
+      setTimeout(() => {
+        setPopupMessage('');
+      }, 500);
+    }
+  }, []);
 
-            <div className="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LnemDzWNE2A?si=dhdhVKp8khYvv4Gx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  const handleGoogleSignIn = async () => {
+    try {
+      setIsLoggingIn(true); // Start the login animation
+      const user = await signInWithGoogle();
+      console.log('User signed in with Google:', user);
+      router.push('/');
+    } catch (error) {
+      setError(error.message);
+      console.error('Google sign-in failed:', error.message);
+    } finally {
+      setIsLoggingIn(false); // Stop the login animation
+    }
+  };
+
+  const handleSignIn = async (event) => {
+    event.preventDefault();
+    try {
+      setIsLoggingIn(true); // Start the login animation
+      const user = await signIn(email, password);
+      console.log('User signed in:', user);
+      router.push('/');
+    } catch (error) {
+      setError(error.message);
+      setPopupMessage('Incorrect email or password. Please try again.');
+      console.error('Sign in failed:', error.message);
+    } finally {
+      setIsLoggingIn(false); // Stop the login animation
+    }
+  };
+
+  return (
+    <div>
+      <Navbar />
+      <section className='mainbody'>
+        {popupMessage && <div className="popup">{popupMessage}</div>}
+        {isLoggingIn && (
+          <div className="lottie-container">
+            <Lottie
+              options={{
+                loop: true,
+                autoplay: true,
+                animationData: lottieAnimation,
+                rendererSettings: {
+                  preserveAspectRatio: 'xMidYMid slice',
+                },
+              }}
+              height={200}
+              width={200}
+            />
+          </div>
+        )}
+        <h1>Login</h1>
+        <form className='signform' onSubmit={handleSignIn}>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            required
+          />
+          <div className='password-container'>
+          <input
+            type={showPassword ? 'text' : 'password'}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className='password-input'
+            required
+          />
+          <Image src='/eye_icon.png' className='password-toggle' alt="password" width={15} height={12} onClick={togglePasswordVisibility}/>
+          </div>
+
+          <div className='d-flex'>
+          <div class="toggle-container">
+            <label class="toggle-switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+            </label>
+            <div className='toggle-text'>Remember Me</div>
+        </div>
+            <div className='signup'>Forgot Password?</div>
+          </div>
+          <button type='submit'>Submit</button>
+        </form>
+      </section>
+
+      <section className='signbuttons'>
+        <div className='googlesign'>
+          <button onClick={handleGoogleSignIn}>
+            <span className='google-icon'>
+              <Image src='/paymethodgoogle.png' alt='Google Icon' width={30} height={30} loading="lazy" />
+            </span>
+            Sign in with Google
+          </button>
+        </div>
+        <div className='signupbuttons d-flex'>
+          <div>Don't have an account?</div>
+          <button className='signup' onClick={()=>router.push('/accpage')}>Sign up now</button>
+        </div>
+        {/* {error && <p>Error: {error}</p>} */}
+        {/* <div className='signupbuttons'>
+          <button className='signup'>Sign up</button>
+          <button className='pass'>Forgot Password</button>
+        </div> */}
+      </section>
+      <section>
+        <FOOTER />
+      </section>
     </div>
-            </section>
-
-            <section className='estimate'>
-                <h1>How do we estimate revenue?</h1>
-                <p>We are using proprietary algorithms and estimations. We consider our revenue estimates to be close to reality but they cannot be treated 100% accurate.</p>
-            </section>
-
-            <section className='updateform'>
-                <h1>Get The Latest Updates</h1>
-                <p>Do you want to learn more from us? Subscribe to our newsletter and get the latest news.</p>
-
-                <div className="form-row">
-                <input type="text" id="name" name="name" placeholder="Name" required />
-                <input type="email" id="email" name="email" placeholder="Email" required />
-                <button type='submit'>Subscribe</button>
-            </div>
-            </section>
-
-            <section>
-                <FOOTER></FOOTER>
-            </section>
-        </div> 
-              
-    );
+  );
 }
-
-               
-      
