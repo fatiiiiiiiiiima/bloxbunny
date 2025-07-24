@@ -1,0 +1,248 @@
+* {
+  font-family: 'Jost',sans-serif;
+}
+
+.gameheading{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.gametextcontents h1{
+    font-family: 'Jost',sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #000;
+    
+}
+.gametextcontets p{
+    color: #7C8DB5;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Jost',sans-serif;
+}
+.gametextcontents{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+  .filterheading {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 8px; 
+    border-bottom: 1px solid #0000001A ;
+    
+  }
+  
+  .filterheading h1 {
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 16.13px;
+    margin: 0; 
+    margin-bottom: 10px;
+  }
+
+  .filterheading img{
+    margin-bottom: 10px;
+  }
+
+  .daterange{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #0000001A;
+  }
+  .daterange h1{
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-size: 16.13px;
+    
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Jost',sans-serif;
+
+  }
+  .header h3{
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 16.13px;
+  }
+  .genreFilter{
+    border-bottom: 1px solid #0000001A;
+  }
+  .genreList {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-family: 'Jost',sans-serif;
+  }
+  
+  .genre {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+    font-family: 'Jost',sans-serif;
+  }
+  
+  .genre input[type="checkbox"] {
+    margin-right: 10px; 
+  }
+ 
+
+  .display{
+
+    border-radius: 10px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px; 
+    flex-wrap: wrap;
+  }
+  .filters {
+    flex: 1; /* Allow filters section to take available space */
+  }
+  .displayside{
+    display: none;
+  }
+  .carddisplay{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* This will create a responsive number of columns based on the card size */
+    grid-gap: 20px; /* This is the space between your cards */
+    padding-left: 20px;
+    text-decoration: none; 
+    width: 100%;
+  }
+  .screen{
+    /* display: flex; */
+    flex-wrap: wrap;
+    width: 25%;
+  }
+  .gamesview{
+    display: flex;
+    
+  }
+
+  .filter-toggle {
+    display: none; 
+    z-index: 10;
+    cursor: pointer;
+  }
+  .gamecard-link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Optional: Ensures the link color is the same as the surrounding text */
+    /* Add other styles as needed */
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+
+  .displayside {
+    display: none; /* Initially hide the displayside container */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%; /* Adjust the width as needed */
+    height: 100vh;
+    background: white;
+    z-index: 999; /* Ensure it's above other content */
+    transition: right 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .displayside.open {
+    right: 0; /* Slide open the displayside container */
+  }
+  
+  @media (max-width:1024px) {
+    .gamesview{
+      justify-content: center;
+    }
+    .filters {
+      width: 100%; /* Filters take full width */
+    }
+  
+   
+    .filter-toggle {
+      display: flex; /* Display the filter toggle icon */
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1000; /* Ensure it's above other content */
+      cursor: pointer;
+    }
+  
+      .display{
+        display: none;
+      }
+    
+      .displayside {
+        display: flex; /* or block, depending on your layout */
+    padding-top:110px ;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start hidden to the left */
+    width: 100%; /* Adjust width as needed */
+    height: 100vh; /* Full viewport height */
+    background: white;
+    z-index: 100; /* Ensure it's above other content */
+    transition: right 0.3s ease; /* Smooth transition for sliding effect */
+  overflow-y: auto; 
+    }
+    
+  
+    .filterdispheading {
+      text-align: center; /* Center-align the heading */
+      /* Other styling as needed */
+    }
+  
+    .daterangedisp,.genreFilterdisp, .revenuedisp,.ccudisp{
+      padding: 20px;
+      border-bottom: 1px solid #0000001A;
+    }
+    .close-button {
+      position: absolute; /* Position it within .displayside */
+      /* top: 10px; Adjust as needed */
+      right: 10px; /* Adjust as needed */
+      background: transparent;
+      border: none;
+      font-size: 30px; /* Adjust as needed */
+      cursor: pointer;
+    }
+  
+  
+    .displayside.open {
+    right: 0; 
+    }
+    
+  }
+  /* CSS for small screens and mobile screens */
+@media (max-width: 590px) {
+
+  
+
+  .gameheading{
+    padding-top: 60px;
+  }
+  .carddisplay{
+    grid-template-columns: 1fr;
+    /* padding-left: 0; */
+    width: 80%;
+    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+  }
+
+  .filter-toggle {
+  z-index: 1000;
+}
+
+  
+ 
+
+}

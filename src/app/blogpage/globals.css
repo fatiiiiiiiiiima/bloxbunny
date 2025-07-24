@@ -1,0 +1,181 @@
+a {
+    text-decoration: none;
+color: #232323;
+font-family: 'Jost',sans-serif;
+}
+
+.mainbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+   
+}
+
+.mainbody h1{
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Jost',sans-serif; 
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+ }
+
+.mainbody p {
+    font-size: 35.2px;
+    font-weight: 400;
+    font-family: 'Jost',sans-serif;
+    padding-bottom: 2rem;
+}
+
+.blogs{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.blogs-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+}
+
+.blogscol{
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #FAFAFA;
+    height: fit-content;
+    width: 348px;
+    
+    
+}
+
+.blogscol h1{
+    font-weight: 400;
+    font-size: 34.2px;
+    color: #232323;
+    text-align: left;
+    font-family: 'Jost',sans-serif;
+    max-width: 300px;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.blogscol span{
+    font-weight: 700;
+    font-size: 18.2px;
+    font-family: 'Jost',sans-serif;
+}
+
+.blogscol h3{
+    font-weight: 400;
+    font-size: 19.2px;
+    font-family: 'Jost',sans-serif;
+    padding-left: 20px;
+   
+}
+
+.blogscol p{
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-size: 19.2px;
+    max-width: 300px;
+    padding-left: 20px;
+}
+
+.designbutton{
+    padding-left: 20px;
+    margin-bottom: 15px;
+    margin-top: 127px;
+
+}
+
+.blogscol button{
+    background-color: #6592E6;
+    color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    width: 153.78px;
+    height: 49.98px;
+    font-weight: 600;
+    font-size: 19.2px;
+    font-family: 'Jost',sans-serif;
+}
+
+.blogscol button:hover{
+    background-color: #4479D9;
+}
+
+@media screen and (max-width:1024px) {
+    .blogs-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .blogscol {
+        width: auto; 
+    }
+  
+}
+
+@media screen and (max-width:590px) {
+    .blogs-grid {
+        grid-template-columns: 1fr; 
+    }
+    .blogscol {
+        width: auto; 
+    }
+    .mainbody h1{
+        font-size: 30.5px;
+        font-weight: 700;
+        font-family: 'Jost',sans-serif;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    
+    .mainbody p {
+        font-size: 24.7px;
+        font-weight: 400;
+        text-align: center;
+        font-family: 'Jost',sans-serif;
+    }
+    .blogscol p{
+        font-family: 'Jost',sans-serif;
+        font-weight: 400;
+        font-size: 17.4px;
+        max-width: 300px;
+        padding-left: 20px;
+    }
+    .blogscol span{
+        font-weight: 700;
+        font-size: 17.4px;
+        font-family: 'Jost',sans-serif;
+    }
+    
+    .blogscol h3{
+        font-weight: 400;
+        font-size: 17.4px;
+        font-family: 'Jost',sans-serif;
+        padding-left: 20px;
+       
+    }
+
+    .blogscol h1{
+        font-weight: 400;
+        font-size: 24.7px;
+        color: #232323;
+        text-align: left;
+        font-family: 'Jost',sans-serif;
+        max-width: 300px;
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+
+   
+   
+}
+

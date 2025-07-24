@@ -1,0 +1,129 @@
+.statcard {
+  border-right: 1px solid #EAEAEA; 
+  padding: 20px; 
+  background-color: #ffffff; 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  margin: 10px; 
+  box-sizing: border-box; 
+  overflow: hidden;
+}
+
+.leftsection {
+  flex: 0 0 40%;
+}
+
+.rightsection {
+  flex: 0 0 50%; 
+}
+.mainText, .label, .trend span {
+  font-family: 'Jost', sans-serif;
+}
+
+.mainText {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 16px; 
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.trend span {
+  margin-left: 5px;
+  font-size: 14px; 
+  color: #7C8DB5;
+  flex-wrap: nowrap;
+}
+
+.rightsection{
+  padding: 5px;
+  width: fit-content;
+}
+.rightsection .cornerIcon {
+  padding: 10px; /* Adjust padding as needed to create space around the icon */
+  border-radius: 10px;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px; /* You can adjust this margin as needed */
+}
+
+@media screen and (max-width: 1024px) {
+  .statcard {
+    padding: 15px; 
+  }
+
+  .mainText {
+    font-size: 24px;
+  }
+
+  .label {
+    font-size: 14px; 
+  }
+
+  .trend span {
+    font-size: 12px; 
+  }
+
+  .rightsection .cornerIcon {
+    padding: 5px; 
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .statcard {
+
+    flex-basis: content; 
+    /* padding: 5px; */
+    text-align: left;
+    justify-content: left;
+    padding: 0%;
+  }
+
+  .mainText {
+    font-size: 15px; 
+  }
+
+  .label, .trend span {
+    font-size: 10px; 
+  }
+
+  
+  .rightsection .cornerIcon {
+   
+    width: 25px;
+    height: 25px;
+  }
+
+  .setdash{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+
+  /* .leftsection {
+  
+    flex: 0 0 30%;
+  }
+  
+  .rightsection {
+    
+    flex: 0 0 20%;
+    margin-right: 0;
+  } */
+}

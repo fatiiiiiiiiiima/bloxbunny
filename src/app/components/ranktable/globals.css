@@ -1,0 +1,134 @@
+.ranktable-container {
+    /* font-family: Arial, sans-serif; */
+    overflow-x: auto;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  td{
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-size: 16.38px;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+   */
+  .percentage-change {
+    color: #34C759; /* Adjust the color based on the value being positive or negative */
+    font-weight: 400;
+    font-size: 13.38px;
+}
+  
+  .rankgame-info {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+  }
+  
+  .rankgame-info span {
+    margin-left: 8px;
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-size: 16.38px;
+  }
+  
+  .rankmenu-dots {
+    cursor: pointer;
+    margin-top: 30px;
+  }
+
+  
+
+  .ranktable-container td.grey-text {
+    color: #9C9EA1;
+}
+
+
+
+  .rankheading{
+    color: #BCC1CA;
+    font-family: 'Jost',sans-serif;
+    font-size: 10.53px;
+    font-weight: 500;
+  }
+
+  .tbody{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .thead{
+    display: flex;
+  }
+  /* Add more CSS for responsive layout, colors, fonts, etc., to match your design */
+  .positive {
+    color: #34C759; /* Green color for positive values */
+  }
+  
+  .negative {
+    color: #FF3B30; /* Red color for negative values */
+  }
+
+  /* Existing styles... */
+
+.ranktable-container {
+  overflow-x: auto; /* Ensures the table is scrollable on smaller screens */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .rankgame-info {
+    margin-top: 15px; /* Reduce margin-top for smaller screens */
+  }
+
+  .rankgame-info span, td {
+    font-size: 14px; /* Reduce font size for better readability */
+  }
+
+  .percentage-change {
+    font-size: 12px; /* Reduce font size */
+  }
+
+  .rankmenu-dots img {
+    padding-top: 60px;
+    width: 15px; /* Reduce image width */
+    /* height: auto; Maintain aspect ratio */
+  }
+  /* Adjust other styles as necessary */
+}
+
+/* Further adjustments for mobile devices */
+@media (max-width: 590px) {
+  .rankgame-info {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .rankgame-info span {
+    margin-left: 0;
+    margin-top: 5px; /* Add space above the span */
+  }
+
+  td, th {
+    padding: 5px; /* Reduce padding for small screens */
+    font-size: 12px; /* Adjust font size for small screens */
+    white-space: nowrap; /* Prevent line breaks within table cells */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; 
+  }
+  /* Adjust other styles as necessary */
+}
+
+  

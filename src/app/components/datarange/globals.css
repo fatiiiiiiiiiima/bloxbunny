@@ -1,0 +1,41 @@
+.dateRangePicker {
+  font-family: "Jost", sans-serif;
+  font-size: 10.15px;
+  font-weight: 500;
+  color: #293050;
+  margin-bottom: 20px;
+}
+
+.dateLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #757575; /* Light grey color for the label */
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.inputContainer button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.inputContainer button span {
+  margin-left: 5px;
+}
+
+/* Adjustments for the icon */
+.inputContainer svg {
+  vertical-align: middle;
+}

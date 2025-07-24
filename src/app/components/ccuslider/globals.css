@@ -1,0 +1,101 @@
+.filterheading {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 8px; 
+    border-bottom: 1px solid #0000001A ;
+  }
+  
+  .filterheading h1 {
+    font-family: 'Jost';
+    font-weight: 700;
+    font-size: 16.13px;
+    margin: 0; 
+    margin-bottom: 10px;
+  }
+
+  .filterheading img{
+    margin-bottom: 10px;
+  }
+
+  .daterange{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #0000001A;
+  }
+  .daterange h1{
+    font-family: 'Jost';
+    font-weight: 700;
+    font-size: 16.13px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+  }
+  .genreFilter{
+    border-bottom: 1px solid #0000001A;
+  }
+  .genreList {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .genre {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+  .genre input[type="checkbox"] {
+    margin-right: 10px; 
+  }
+  .revenue{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #0000001A;
+  }
+
+  .revenue h1{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 16.13px;
+    
+  }
+
+  .ccu{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ccu h1{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 16.13px;
+  }
+
+  .display{
+    /* display: flex; */
+    /* width: 25%; */
+    border-radius: 10px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px; 
+    flex-wrap: wrap;
+  }
+
+  .filter-toggle {
+    display: none; 
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+    background: #000; 
+    color: #fff; 
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }

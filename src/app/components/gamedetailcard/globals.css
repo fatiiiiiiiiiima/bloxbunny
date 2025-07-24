@@ -1,0 +1,149 @@
+/* Card.module.css */
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+    align-items: start;
+  }
+  .headingcard{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 90%;
+  }
+
+  .title{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 22.38px;
+    justify-content: left;
+  }
+  .cardslogo {
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+   .textcardcontent{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } 
+  .content {
+    padding: 8px 16px;
+  }
+  
+ 
+  
+  .subTitle {
+    font-size: 17.9px;
+    font-weight: 400;
+    color: #0178B4;
+    margin: 4px 0;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+ 
+  .stars {
+    /* Add styles for stars */
+    color: #ffd700; /* Gold color */
+    margin-right: 8px;
+  }
+  
+  .ratingCount {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-size: 12.53px;
+    color: #66778F;
+  }
+  
+  .info {
+    display: flex;
+  /* flex-wrap: wrap;  */
+  justify-content: space-between; 
+  width: 100%;
+  margin-top: 8px;
+  
+  }
+  .info-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20rem;
+    justify-content: space-between;
+    align-items: start; 
+  }
+  .info div {
+    text-align: start;
+    
+  }
+  
+  .info strong {
+    display: block;
+    padding-top: 10px;
+    color: #191F2A;
+    font-weight: 700;
+    font-size: 16.83px;
+    text-align: start;
+    font-family: 'Jost',sans-serif;
+  }
+  
+  .info span {
+    padding-top: 10px;
+    display: block;
+    color: #191F2A;
+    text-align: start;
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-size: 16.83px;
+  }
+ /* Existing styles... */
+
+/* For medium screens (like tablets) */
+@media (max-width: 1024px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns for medium screens */
+    column-gap: 10rem; /* Reduce column gap */
+  }
+
+  .headingcard{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+  }
+ 
+  .cardlogo img{
+    margin-bottom: 20px;
+  }
+  .textcardcontent{
+    padding-top: 20px;
+    padding-left: 70px;
+  }
+
+  /* Adjust other styles as necessary */
+}
+
+/* For small screens (like mobile devices) */
+@media (max-width: 590px) {
+
+  .headingcard{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+  }
+  
+  .info strong, .info span {
+    font-size: smaller; /* Reduce font size for readability */
+  }
+  
+  /* Adjust other styles for better readability and fit */
+}
+
+

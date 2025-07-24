@@ -1,0 +1,564 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Jost',sans-serif;
+}
+
+.mainimage {
+    background-image: url('/robloxbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 120vh; 
+    color: #FFFFFF;
+    overflow: hidden;
+    margin: 0; 
+}
+
+.mainheadings{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 200px;
+    margin-top: 200px;
+    height: 392.67px;
+}
+.mainheadings h1{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 73px;
+    text-align: right;
+    max-width: 414.9px;
+    margin-top: 0.02rem;
+    margin-bottom: 0.02rem;
+}
+.mainheadings p{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 35.2px;
+    text-align: right;
+    max-width: 414.9px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+.mainheadings button{
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #FAFAFA; 
+    color: #7A7A7A;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 35.2px; 
+    font-weight: 600;
+    max-width: 345px;
+    font-family: 'Jost', sans-serif;
+    text-align: center; 
+    margin-bottom: 20px;
+    float: right;
+}
+@font-face {
+    font-family: 'Jost';
+    src: local('Jost'), url('/fonts/Jost-Bold.ttf') format('truetype');
+    font-weight:700 ;
+}
+@font-face {
+    font-family: 'Jost';
+    src: local('Jost'), url('/fonts/Jost-Regular.ttf') format('truetype');
+    font-weight:400 ;
+}
+
+.feature{
+    padding-top: 50px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+.feature h1{
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Jost',sans-serif;
+}
+
+.feature p{
+    font-size: 19.2px;
+    font-weight: 400;
+    color: #232323;
+    margin-bottom: 20px;
+    font-family: 'Jost',sans-serif;
+}
+
+.feature-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+}
+
+.feature-column{
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #FAFAFA;
+    height: 450px;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-column h1{
+    
+    color: #4479D9;
+    font-weight: 700;
+    font-size: 35.2px;
+    text-align: center;
+    /* max-width: 300px; */
+}
+
+.feature-column p{
+    color: #353535;
+    font-weight: 700;
+    font-size: 19.2px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.view{
+    padding-top: 50px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 150px;
+}
+.view h1{
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Jost',sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.view p{
+    font-size: 19.2px;
+    font-weight: 400;
+    color: #232323;
+    margin-bottom: 20px;
+    font-family: 'Jost',sans-serif;
+    margin-top: 0.05rem;
+    margin-bottom: 3rem;
+}
+.payplan{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.pay-grid {
+    display: grid;
+    background-color: #FAFAFA;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    justify-content: center; 
+    align-items: start;
+    margin: auto; 
+    padding: 0 1rem;
+}
+
+.pay-column {
+    background-color: #FFFFFF;
+    max-width: 348px; 
+    width: 100%; 
+    margin: 15px auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    overflow: hidden;
+    border-radius: 4px;
+    
+}
+
+.pay-column h1{
+    color: #232323;
+    font-weight: 700;
+    font-size: 35.2px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0.05rem;
+}
+
+.pay-column h2{
+    color: #6592E6;
+    font-weight: 700;
+    font-size: 73.6px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+.pay-column h3{
+    color: #232323;
+    font-weight: 700;
+    font-size: 19.2px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.pay-column p{
+    color: #232323;
+    font-weight: 400;
+    max-width: 250px;
+    font-size: 19.2px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    border-bottom: 1px solid #0000001A;
+}
+
+.pay-column button{
+    margin-top: 50px;
+    background-color: #6592E6;
+    color: #FFFFFF;
+    border: 1px;
+    border-radius: 4px;
+    height: 47.58px;
+    width: 129.16px;
+    font-size: 17.6px;
+    font-weight: 600;
+    font-family: 'Jost',sans-serif;
+    margin-bottom: 20PX;
+}
+.pay-column button:hover {
+    background-color:#4479D9 ; 
+  }
+.paytext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.paytext p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.estimate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.estimate h1{
+    font-weight: 700;
+    font-size: 48px;
+    font-family: 'Jost',sans-serif;
+}
+
+.estimate p {
+    font-weight: 400;
+    font-size: 35.2px;
+    font-family: 'Jost',sans-serif;
+    text-align: center;
+}
+
+.updateform{
+    background-image: url('/updatebg2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.updateform h1{
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Jost',sans-serif;
+}
+
+.updateform p{
+    font-size: 19.2px;
+    font-weight: 400;
+    color: #232323;
+    margin-bottom: 20px;
+    font-family: 'Jost',sans-serif;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 30px;
+  }
+.form-row input[type="text"]:hover,
+.form-row input[type="email"]:hover{
+
+    border: 1px solid #6592E6;
+}
+  .form-row input[type="text"],
+  .form-row input[type="email"] {
+    width: 304.16px; 
+    padding: 10px;
+    height: 50px;
+    border: 1px solid #ccc; 
+    border-radius: 2px;
+  }
+
+
+  .form-row button{
+   
+    padding: 10px 20px;
+    background-color:   #6592E6; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17.6px; 
+    font-weight: 600;
+    max-width: 119.7px; 
+  }
+  button:hover {
+    background-color:#ccc ; 
+  }
+
+  .form-row button:hover {
+    background-color:#4479D9 ; 
+  }
+
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+  @media screen and (max-width: 1024px) {
+    .mainheadings {
+    align-items: center;
+    margin-right: 0;
+    text-align: center;
+    }
+    
+    .feature-grid, .pay-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-row {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row button {
+        width: 90%;
+    }
+    /* .feature-column,
+.pay-column {
+    width: 90%;
+} */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .feature-grid, .pay-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* .feature-column{
+        width: 90%;
+        margin: auto;
+    }
+   
+    .pay-column{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+
+    
+    .mainheadings {
+        align-items: center;
+        margin-right: 0;
+        justify-content: flex-end;
+        margin-top: 100px;
+        font-family: 'Jost',sans-serif;
+        }
+
+        .mainheadings h1 {
+            font-size: 42px;
+            margin-left: 30px;
+            }
+                .mainheadings p {
+                font-size: 24.7px;
+
+            }
+            
+            .mainheadings button {
+                font-size: 24.7px;
+                margin-left: 230px;
+            }
+        .estimate{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .estimate h1{
+            text-align: center;
+            font-size: 30.5px;
+            margin-left: 10px;
+            font-family: 'Jost',sans-serif;
+        }
+        
+        .estimate p{
+            font-size: 24.7px;
+            font-family: 'Jost',sans-serif;
+        }
+        .updateform h1{
+            font-size: 30.5px;
+            font-weight: 700;
+            margin-left: 10px;
+            font-family: 'Jost',sans-serif;
+            text-align: center;
+            color: #232323;
+        }
+        
+        .updateform p{
+            font-size: 17.4px;
+            font-weight: 400;
+            text-align: center;
+            font-family: 'Jost',sans-serif;
+            color: #232323;
+        }
+
+        .form-row{
+            width: 100%;
+        }
+        
+        .form-row button{
+            width: 90%;
+            max-width: 90%;
+        }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .mainheadings h1 {
+    font-size: 42px;
+    }
+        .mainheadings p,
+    .mainheadings button {
+        font-size: 24.7px;
+    }
+    .mainheadings {
+        align-items: center;
+        margin-right: 0;
+        margin-top: 100px;
+        margin-right: 20px;
+        }
+
+    .feature-grid, .pay-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+        }
+
+        .feature-column{
+            width: 90%;
+            margin: auto;
+        }
+        
+
+.form-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+    width: 90%;
+}
+
+.form-row button {
+    width: 90%;
+}
+
+.estimate{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.estimate h1{
+    text-align: center;
+    font-size: 30.5px;
+    margin-left: 10px;
+    font-family: 'Jost',sans-serif;
+}
+
+.estimate p{
+    font-size: 24.7px;
+    font-family: 'Jost',sans-serif;
+}
+
+.updateform h1{
+    font-size: 30.5px;
+    font-weight: 700;
+    margin-left: 10px;
+    font-family: 'Jost',sans-serif;
+    text-align: center;
+    color: #232323;
+}
+
+.updateform p{
+    font-size: 17.4px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    color: #232323;
+}
+
+.form-row button{
+    width: 90%;
+}
+  }

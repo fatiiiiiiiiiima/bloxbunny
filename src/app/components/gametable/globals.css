@@ -1,0 +1,115 @@
+.table-container {
+    font-family: 'Jost', sans-serif;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  td{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16.38px;
+  }
+  
+ 
+  .percentage-change {
+    color: #34C759; /* Adjust the color based on the value being positive or negative */
+    font-weight: 400;
+    font-size: 13.38px;
+}
+  
+  .game-info {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+  }
+  
+  .game-info span {
+    margin-left: 8px;
+    font-family: 'Jost',sans-serif;
+    font-weight: 600;
+    font-size: 16.38px;
+  }
+  
+  .menu-dots {
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .content{
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-size: 15.79px; 
+  }
+
+  .table-container td.grey-text {
+    color: #9C9EA1;
+}
+
+  .content p{
+    color: #BCC1CA;
+    font-family: 'Jost',sans-serif;
+    font-size: 10.53px;
+    font-weight: 500;
+  }
+
+  .content span{
+    font-family: 'Jost',sans-serif;
+  }
+  
+  /* Define styles for small screens and mobile devices */
+@media screen and (max-width: 768px) {
+  .table-container {
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td, th {
+    padding: 5px; /* Reduce padding for small screens */
+    font-size: 12px; /* Adjust font size for small screens */
+    white-space: nowrap; /* Prevent line breaks within table cells */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; 
+  }
+
+  .game-info {
+    padding-top: 10px; /* Reduce padding between game info and text for small screens */
+  }
+
+  .game-info span {
+    font-size: 14px; /* Adjust font size for game name */
+  }
+
+  .content {
+    font-size: 12px; /* Adjust font size for content */
+  }
+
+  .content p {
+    font-size: 10px; /* Adjust font size for paragraph text */
+  }
+
+  .content span {
+    font-size: 10px; /* Adjust font size for span text */
+  }
+
+  .menu-dots {
+    margin-top: 10px; /* Reduce margin for menu dots */
+  }
+}
+
+@media screen and (max-width: 590px) {
+  table{
+    width: 100%;
+  }
+}

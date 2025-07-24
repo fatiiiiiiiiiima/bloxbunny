@@ -1,0 +1,529 @@
+*{
+    font-family: 'Jost', sans-serif;
+}
+
+.mainbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.mainbody h1{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    padding-bottom: 10px;
+}
+
+.accform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 2rem;
+}
+
+.accform input[type="password"],
+  .accform input[type="email"],.accform input[type="text"] { 
+    padding: 10px;
+    width: 364px;
+    height: 40px;
+    font-family: 'Jost', sans-serif;
+    border: 0.5px solid #ccc; 
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179);
+  }
+
+
+  .accform button{
+    
+    padding: 10px 20px;
+    background-color:   #6592E6; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17.6px; 
+    font-weight: 600;
+    width: 385px;
+    height: 48px;
+     
+  }
+
+  .accform input[type="text"]:hover,
+.accform input[type="email"]:hover{
+
+    border: 1px solid #6592E6;
+}
+
+.googlebuttons{
+    padding-top: 50px;
+    display: block;
+    justify-content: center;
+}
+ 
+.googlesignin button {
+    background-color: #333333;    
+    color: white;
+    border: none;
+    border-radius: 1px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    padding-left: 7%;
+     width: 388px;
+     margin: auto;
+   /* height: 50px; */
+   box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179);
+   height: 48px;
+   border-radius:4px;
+}
+
+.googlesignin button:hover{
+    box-shadow: 0 0 10px rgba(102, 178, 255, 1);
+    /* background-color:   #6592E6 */
+}
+.googlesignin button .google-icon {
+    padding-right: 20px;
+    display: flex; 
+}
+
+.signup{
+    /* padding: 10px 20px; */
+    /* background-color:   #232323;  */
+    color: #007AFF;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 17.6px; 
+    font-weight: 500;
+    /* height: 40px;   
+    box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179); */
+}
+
+.access{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 950px;
+}
+
+.access h1{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #232323;
+}
+
+.access p{
+    margin-top: 5px;
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-size: 35.2px;
+    text-align: center;
+    color: #232323;
+}
+
+.toggle-container {
+    display: flex;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-text{
+    padding: 6px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.signupbuttons{
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 20px;
+    width: 388px;
+    margin: auto;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.pay-grid {
+    display: grid;
+    background-color: #FAFAFA;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    justify-content: center; 
+    align-items: start;
+    margin: auto; 
+    padding: 0 1rem;
+    font-family: 'Jost', sans-serif;
+}
+
+.pay-column {
+    background-color: #FFFFFF;
+    
+    max-width: 348px; 
+    width: 100%; 
+    margin: 30px auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    overflow: hidden;
+    border-radius: 4px;
+    
+}
+.pay-column h1{
+    color: #232323;
+    font-weight: 700;
+    font-size: 35.2px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    margin-top: 0.05rem;
+    margin-bottom: 0.05rem;
+}
+
+.pay-column h2{
+    color: #6592E6;
+    font-weight: 700;
+    font-size: 73.6px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+.pay-column h3{
+    color: #232323;
+    font-weight: 700;
+    font-size: 19.2px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.pay-column p{
+    color: #232323;
+    font-weight: 400;
+    max-width: 250px;
+    font-size: 19.2px;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    border-bottom: 1px solid #0000001A;
+}
+
+.pay-column button{
+    margin-top: 50px;
+    background-color: #6592E6;
+    color: #FFFFFF;
+    border: 1px;
+    border-radius: 4px;
+    height: 47.58px;
+    width: 129.16px;
+    font-size: 17.6px;
+    font-weight: 600;
+    font-family: 'Jost',sans-serif;
+}
+.pay-column button:hover {
+    background-color:#4479D9 ; 
+  }
+.paytext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+}
+.paytext p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Jost', sans-serif;
+}
+
+.plan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    align-items: center;
+    max-width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Jost', sans-serif;
+}
+
+.plan h1{
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: left;
+}
+
+.plan p{
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-size: 19.2px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+
+
+.pro{
+    padding-top: 50px;
+}
+
+
+.faq-section h1{
+    font-size: 48px;
+    font-family: 'Jost',sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.faq-section {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+  
+}
+
+.faq-question-container {
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 10px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.faq-question {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 19.2px;
+    color: #232323;
+    margin: 0; 
+}
+
+.faq-answer {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 19.2px;
+    color: #232323;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; 
+    padding-left: 0;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .form-row input[type="text"],
+  .form-row input[type="email"] {
+    width: 540px; 
+    padding: 10px;
+    height: 38px;
+    border: 0.5px solid #ccc; 
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179);
+    font-family: 'Jost', sans-serif;
+  }
+
+  .form-rows input[type="url"]{
+    width: 1140px; 
+    padding: 10px;
+    height: 38px;
+    font-family: 'Jost', sans-serif;
+    border: 0.5px solid #ccc; 
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179);
+  }
+
+  .form-rows{
+    padding-bottom: 30px;
+  }
+
+  .form-rows input[type="url"]:hover{
+    border: 1px solid #6592E6;
+  }
+  
+  textarea {
+    width: 1140px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    height: 69px;
+    margin-bottom: 20px;
+    resize: vertical;
+    font-family: 'Jost', sans-serif;
+    border: 0.5px solid #ccc; 
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 1, 0.179);
+  }
+  textarea:hover{
+    border: 1px solid #6592E6;
+  }
+  .form-container button {
+
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #6592E6; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17.6px; 
+    font-weight: 600;
+    max-width: 200px; 
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 50px;
+  }
+  
+  button:hover {
+    background-color: #4479D9; 
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .mainbody h1 {
+        font-size: 36px; 
+    }
+
+    .accform input[type="text"],
+    .accform input[type="email"],
+    .accform button {
+        width: 90%; 
+    }
+    .form-container input[type="url"]{
+        width: 90%;
+    }
+
+    textarea{
+        width: 90%;
+    }
+    .form-container {
+        width: 70%; /* Increase width on smaller screens */
+        padding: 15px;
+    }
+
+    .access,
+    .plan,
+    .faq-section {
+        width: 95%; 
+        padding: 20px; 
+    }
+
+    .pay-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+  
+    .plan h1, .plan p, .pro h1, .pro p {
+        text-align: center; 
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .mainbody h1 {
+        padding-top: 10px;
+        font-size: 24px; 
+    }
+
+    .faq-question, .faq-answer {
+        font-size: 17px; 
+    }
+
+
+    .accform input[type="password"],
+    .accform input[type="email"],
+    .accform input[type="text"],
+    .accform input[type="url"]
+    .accform button {
+        width: 90%; 
+    }
+    .pay-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+        }
+    
+    .form-container input[type = "email"],
+    .form-container input[type="text"]{
+        width: 130%;
+    }
+    textarea{
+        width: 90%;
+    }
+    .access{
+        display: flex;
+        justify-content: center;
+    }
+    .access h1{
+        text-align: center;
+    }
+}

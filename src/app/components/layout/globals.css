@@ -1,0 +1,15 @@
+/* Layout styles */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .sidebararea{
+    width: 30%;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  

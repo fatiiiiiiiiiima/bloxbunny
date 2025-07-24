@@ -1,0 +1,169 @@
+/* Card.module.css */
+
+.gamecard {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    align-items: start;
+    min-height: 250px;
+  }
+  .cardheadingsect{
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    /* flex-wrap: wrap; */
+  }
+
+  .title{
+    font-family: 'Jost',sans-serif;
+    font-weight: 600;
+    font-size: 16.71px;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-items: start;
+    text-align: left;
+    /* white-space: nowrap; */
+  }
+  .gamecardlogo {
+    border-radius: 8px;
+    margin-right: 10px;
+    /* align-items: start; */
+  }
+   .gametextcontent{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } 
+  .content {
+    padding: 8px 16px;
+    /* overflow-y: auto; */
+    overflow: hidden;
+  }
+  
+ 
+  
+  .subTitle {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+ 
+  .stars {
+    /* Add styles for stars */
+    color: #ffd700; /* Gold color */
+    margin-right: 8px;
+  }
+  
+  .ratingCount {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-size: 12.53px;
+    color: #66778F;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 8px;
+    gap: 5rem;
+  }
+  
+  .info div {
+    text-align: start;
+    flex-basis: 33%;
+  }
+  
+  .info strong {
+    display: block;
+    padding-top: 10px;
+    color: #66778F;
+    font-weight: 500;
+    font-size: 12.53px;
+    text-align: start;
+    font-family: 'Jost',sans-serif;
+  }
+  
+  .info span {
+    padding-top: 10px;
+    display: block;
+    color: #191F2A;
+    text-align: center;
+    font-family: 'Jost',sans-serif;
+    font-weight: 600;
+    font-size: 12.53px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  @media (max-width:1300px){
+    .info{
+      gap: 1rem;
+    }
+  }
+  @media (max-width: 1024px) {
+
+    .info strong{
+      font-size: small;
+    }
+    .info span {
+      font-size: small;
+    }
+
+  }
+  @media (max-width: 900px) {
+    .cardheadingsect {
+
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+    }
+
+    .gametextcontent{
+      margin-left: 20px;
+    }
+    .gamecardlogo {
+        width: 30px; 
+        height: 30px; 
+        flex-shrink: 0;
+}
+
+.textcontent {
+  flex-grow: 1; /* Allows text content to take up remaining space */
+}
+
+.title, .subTitle {
+  text-align: left; /* Aligns title and subtitle to the left */
+}
+
+
+  }
+
+  @media (max-width:550px) {
+    .gamecard {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      align-items: start;
+      max-width: 350px; /* Set a maximum width for the card */
+      width: 100%; /* Ensure the card takes up the full width of its container */
+      margin: 0 auto; /* Center the card horizontally */
+      margin-bottom: 20px; /* Add some bottom margin for spacing */
+    }
+    
+    .info{
+      gap: 3.5rem;
+    }
+  }
+
